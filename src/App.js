@@ -7,6 +7,7 @@ import Landing from "./components/LandingPage";
 import Contacts from "./components/contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Login from "./components/login";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Landing />
+        </Route>
+        
+        <Route exact path="/login">
+          <Login />
         </Route>
 
         <Route exact path="/userManagment">
