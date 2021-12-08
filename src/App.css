@@ -234,7 +234,7 @@ CONTACTS */
   font-weight: bold;
 }
 
-.input-field input[type="text"]:focus + label {
+.input-field input[type="text"]:focus+label {
   color: #000;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -265,25 +265,26 @@ CONTACTS */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:695px;
+  height: 695px;
 }
 
 .sensor_list {
   width: 500px;
 }
-.selected_sensor{
-  width:500px
+
+.selected_sensor {
+  width: 500px
 }
 
-.info_123{
-  font-family: "Montserrat", sans-serif; 
+.info_123 {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
 
 .pointer {
- align-self: flex-end;
- height: 350px;
+  align-self: flex-end;
+  height: 350px;
 }
 
 /* UPDATE USER */
@@ -387,7 +388,7 @@ label {
 .button_22 {
   color: white;
   background-color: #24bddf;
- position: absolute;
- bottom: -220px;
+  position: relative;
+  bottom: -20px;
 
 }

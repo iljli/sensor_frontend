@@ -214,27 +214,27 @@ const Graph = props => {
 
     return (
         <>
-        <div className="cont9">
-            <div class="graph-xy">
-                Sensor id: {_id}
-                {graphOptions && <ReactECharts option={graphOptions} />}
-            </div>
-            <div>
-                <DatePicker dateSelect={dateSelected} setDatarange={getValue} />
-            </div>
-
-            <div class="row">
-                <div class="input-field col s4">
-                    <select class="browser-default" defaultValue="" onChange={handleResulution}>
-                        <option value="10" disabled>Number of Values in Graph</option>
-                        <option value="10">10</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="250">250</option>
-                    </select>
+            <div className="cont9">
+                <div class="graph-xy">
+                    Sensor id: {_id}
+                    {graphOptions && <ReactECharts option={graphOptions} />}
                 </div>
-                <button className="button_22 btn waves-effect waves-light #26c6da cyan lighten-1 col s1" onClick={drawDiagram}>Get Graph</button>
-            </div>
+                <div>
+                    <DatePicker dateSelect={dateSelected} setDatarange={getValue} />
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s4">
+                        <select class="browser-default" defaultValue="" onChange={handleResulution}>
+                            <option value="10" disabled>Number of Values in Graph</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="250">250</option>
+                        </select>
+                    </div>
+                    <button className="button_22 btn waves-effect waves-light #26c6da cyan lighten-1 col s6" onClick={drawDiagram}>Get Graph</button>
+                </div>
             </div>
         </ >
     )
