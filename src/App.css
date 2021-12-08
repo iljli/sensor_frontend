@@ -300,8 +300,8 @@ CONTACTS */
 
 .container7 {
   width: 660px;
-  position: absolute;
-  right: 100px;
+  position: relative;
+  right: -100px;
   bottom: 15px;
 }
 
@@ -365,9 +365,9 @@ label {
 }
 
 .my_button2 {
-  position: absolute;
-  left: 230px;
-  bottom: 100px;
+  /* position: relative; */
+  left: 0px;
+  /* bottom: 100px; */
   color: black;
 }
 
