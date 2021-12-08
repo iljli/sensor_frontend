@@ -214,6 +214,7 @@ const Graph = props => {
 
     return (
         <>
+        <div className="cont9">
             <div class="graph-xy">
                 Sensor id: {_id}
                 {graphOptions && <ReactECharts option={graphOptions} />}
@@ -232,7 +233,8 @@ const Graph = props => {
                         <option value="250">250</option>
                     </select>
                 </div>
-                <button class="btn waves-effect waves-light col s4" onClick={drawDiagram}>Get Graph</button>
+                <button className="button_22 btn waves-effect waves-light #26c6da cyan lighten-1 col s1" onClick={drawDiagram}>Get Graph</button>
+            </div>
             </div>
         </ >
     )

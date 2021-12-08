@@ -234,7 +234,7 @@ CONTACTS */
   font-weight: bold;
 }
 
-.input-field input[type="text"]:focus+label {
+.input-field input[type="text"]:focus + label {
   color: #000;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -258,19 +258,32 @@ CONTACTS */
 
 .container4 {
   background-color: #f4f4f4;
-  height: 655px;
+  background-image: url("https://www.teahub.io/photos/full/95-956642_white-minimalist-mac..jpg");
+  background-position: 50% 50%;
   display: flex;
+  width: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height:695px;
 }
 
-.link_1 {
-  color: black;
+.sensor_list {
+  width: 500px;
+}
+.selected_sensor{
+  width:500px
 }
 
-.container5 {
-  background-color: crimson;
+.info_123{
+  font-family: "Montserrat", sans-serif; 
+  font-weight: bold;
+}
+
+
+.pointer {
+ align-self: flex-end;
+ height: 350px;
 }
 
 /* UPDATE USER */
@@ -288,13 +301,14 @@ CONTACTS */
   width: 660px;
   position: absolute;
   right: 100px;
+  bottom: 15px;
 }
 
-.container7:hover {
-  background-image: url("https://media1.giphy.com/media/mIRoTngzrIqCT3bJQR/giphy.gif");
+/* .container7:hover {
+  backgropxund-image: url("https://media1.giphy.com/media/mIRoTngzrIqCT3bJQR/giphy.gif");
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: right;
+} */
 
 .my_button1 {
   color: white;
@@ -304,7 +318,6 @@ CONTACTS */
   height: 550px;
   position: absolute;
   left: 10px;
-  background-color: #24bddf;
 }
 
 /* LOGIN PAGE */
@@ -360,4 +373,21 @@ label {
 .info1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-shadow: 2px 2px #fdd835;
+}
+
+/* GRAPHS */
+
+.cont9 {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button_22 {
+  color: white;
+  background-color: #24bddf;
+ position: absolute;
+ bottom: -220px;
+
 }

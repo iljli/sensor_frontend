@@ -7,6 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <img className="logo1" src={logo1} />
+         
           <div className="col l0 s5">
             <h5 className="white-text">  © Moisturize me  ©</h5>
 
