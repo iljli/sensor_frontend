@@ -69,7 +69,7 @@ const ListSensors = (props) => {
   return (
     // <div className="container4">
 
-    <div className=" row" className="container4">
+    <div className="row" className="container4">
 
 
       <h4 className="info_123">Please select a sensor :</h4>
@@ -154,9 +154,6 @@ const ListSensors = (props) => {
         </div>
       </div>
 
-
-
-    </div >
     // </div>
   );
 };
