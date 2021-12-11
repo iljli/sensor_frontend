@@ -116,24 +116,26 @@ const ListSensors = (props) => {
                     )}{" "}
                   Minutes
                 </p>
-                <p>
+                <div>
                   Alarms:
                   {selectedSensor &&
                     selectedSensor.config?.alarms.map((alarm, index) => (
-                      <p>
+                      <>
                         {" "}
-                        Treshold {index + 1}: {alarm?.operator}
-                        {alarm?.treshold} {alarm?.measurement_type}{" "}
-                      </p>
+                        <div>
+                          Treshold {index + 1}: {alarm?.operator}
+                          {alarm?.treshold} {alarm?.measurement_type}{" "}
+                        </div>
+                      </>
                     ))}
-                </p>
+                </div>
               </>
             ) : <h4> </h4>}
           </div>
           {selectedSensor && (
             <div className="container5 card-action">
-              <NavLink to={`/graph/${selectedSensor?._id}`}>
-                <a className="waves-effect waves-light btn-small">Graph</a>
+              <NavLink className="waves-effect waves-light btn-small" to={`/graph/${selectedSensor?._id}`}>
+                Graph
               </NavLink>
 
               {/* <a class="waves-effect waves-light btn-small">
@@ -154,7 +156,7 @@ const ListSensors = (props) => {
 
 
 
-    </div>
+    </div >
     // </div>
   );
 };

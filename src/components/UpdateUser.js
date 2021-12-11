@@ -66,36 +66,36 @@ const Update_user = () => {
   return (
     <div className="container6">
       {/* <img className="man" src={man} /> */}
-      <div class="row" className="container7">
-        <form class="col s6 right-align" onSubmit={handleSubmit}>
-          <div class="row">
-            <div class=" input-field col s12">
+      <div className="row" className="container7">
+        <form className="col s6 right-align" onSubmit={handleSubmit}>
+          <div className="row">
+            <div className=" input-field col s12">
               <input
                 id="username"
                 type="text"
-                class="validate"
+                className="validate"
                 onChange={handleInputChange}
                 name="username"
                 value={userData?.username}
               />
               <label >Username</label>
             </div>
-            <div class="input-field col s6">
+            <div className="input-field col s6">
               <input
                 id="first_name"
                 type="text"
-                class="validate"
+                className="validate"
                 onChange={handleInputChange}
                 name="first_name"
                 value={userData?.first_name}
               />
               <label >First Name</label>
             </div>
-            <div class="input-field col s6">
+            <div className="input-field col s6">
               <input
                 id="last_name"
                 type="text"
-                class="validate"
+                className="validate"
                 onChange={handleInputChange}
                 name="last_name"
                 value={userData?.last_name}
@@ -103,12 +103,12 @@ const Update_user = () => {
               <label >Last Name</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
+          <div className="row">
+            <div className="input-field col s12">
               <input
                 id="password"
                 type="password"
-                class="validate"
+                className="validate"
                 onChange={handleInputChange}
                 name="password"
                 value={userData?.password}
@@ -116,12 +116,12 @@ const Update_user = () => {
               <label htmlFor="password">Password</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
+          <div className="row">
+            <div className="input-field col s12">
               <input
                 id="email"
                 type="email"
-                class="validate"
+                className="validate"
                 onChange={handleInputChange}
                 name="email"
                 value={userData?.email}
@@ -130,18 +130,18 @@ const Update_user = () => {
             </div>
           </div>
           {/* <button
-            class="btn waves-effect waves-light"
+            className="btn waves-effect waves-light"
             type="submit"
             name="action"
             pulse
           >
             UPDATE USER
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
           </button> */}
 
 
           <button className=" my_button1 btn waves-effect waves-light #26c6da cyan lighten-1" type="submit" name="action">Change Userdata
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
           </button>
 
         </form>

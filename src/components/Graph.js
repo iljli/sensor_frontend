@@ -17,6 +17,7 @@ const Graph = props => {
     const { _id } = useParams();
     const [rawMeasurements, setRawMeasurements] = useState();
     const [graphOptions, setGraphOptions] = useState();
+    const [graphOptions_pressure, setGraphOptions_pressure] = useState();
     const [dateRange, setDateRange] = useState(
         {
             startDate: Math.floor(Date.now() / 1000) - FIVE_MINUTES,
@@ -129,6 +130,68 @@ const Graph = props => {
                     trigger: 'axis',
                 },
             });
+
+        setGraphOptions_pressure(
+            {
+                // title: {
+                //     text: 'Hello Echarts-for-react.',
+                // },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['Pressure hPa']
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                grid: {
+                    top: 30,
+                    left: 50,
+                    right: 70,
+                    bottom: 30
+                },
+                xAxis:
+                //  [
+                {
+                    type: 'category',
+                    // data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    data: recorded_at,
+
+                },
+                // {
+                //     type: 'category',
+                //     // data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                //     data: recorded_at,
+                // }],
+                yAxis: [
+                    {
+                        type: 'value',
+                        scale: true,
+                        max: 1100,
+                        min: 950,
+                        name: 'Pressure hPa',
+                        // boundaryGap: [0.2, 0.2]
+                    },
+                ],
+                series: [
+                    {
+                        name: 'Pressure hPa',
+                        // data: [820, 932, 901, 934, 1290, 1330, 1320],
+                        data: pressure,
+                        type: 'line',
+                        smooth: true,
+                        xAxisIndex: 0,
+                        yAxisIndex: 0,
+
+                    },
+                ],
+                tooltip: {
+                    trigger: 'axis',
+                },
+            });
     }
 
     const dateSelected = (e) => {  // not used
@@ -215,17 +278,18 @@ const Graph = props => {
     return (
         <>
             <div className="cont9">
-                <div class="graph-xy">
+                <div className="graph-xy">
                     Sensor id: {_id}
                     {graphOptions && <ReactECharts option={graphOptions} />}
+                    {graphOptions_pressure && <ReactECharts option={graphOptions_pressure} />}
                 </div>
                 <div>
                     <DatePicker dateSelect={dateSelected} setDatarange={getValue} />
                 </div>
 
-                <div class="row">
-                    <div class="input-field col s4">
-                        <select class="browser-default" defaultValue="" onChange={handleResulution}>
+                <div className="row">
+                    <div className="input-field col s4">
+                        <select className="browser-default" defaultValue="" onChange={handleResulution}>
                             <option value="10" disabled>Number of Values in Graph</option>
                             <option value="10">10</option>
                             <option value="25">25</option>
