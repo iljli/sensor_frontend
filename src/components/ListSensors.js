@@ -79,7 +79,7 @@ const ListSensors = (props) => {
             <a
               href="#!"
               className=" link_1 collection-item"
-              key={index}
+              key={nanoid()}
               onClick={() => handleSelectSensor({ sensor })}
             >
               <p className="sensor_list1"> {sensor?.name} - {sensor.location?.loc_name} </p>
@@ -122,7 +122,7 @@ const ListSensors = (props) => {
                     selectedSensor.config?.alarms.map((alarm, index) => (
                       <>
                         {" "}
-                        <div>
+                        <div key={nanoid()}>
                           Treshold {index + 1}: {alarm?.operator}
                           {alarm?.treshold} {alarm?.measurement_type}{" "}
                         </div>
@@ -138,7 +138,7 @@ const ListSensors = (props) => {
                 Graph
               </NavLink>
 
-              {/* <a class="waves-effect waves-light btn-small">
+              {/* <a className="waves-effect waves-light btn-small">
                                 Configure a sensor
                             </a> */}
               {/* ToDo */}
@@ -147,7 +147,7 @@ const ListSensors = (props) => {
               </NavLink>
 
 
-              {/* <a class="waves-effect waves-light btn-small">Delete a Sensor</a> */}
+              {/* <a className="waves-effect waves-light btn-small">Delete a Sensor</a> */}
               {/* ToDo */}
             </div>
           )}

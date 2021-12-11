@@ -80,11 +80,11 @@ const CreateSensor = props => {
 
     return (
         <div>
-            <div class="row">
-                <form class="col s6 right-align" onSubmit={handleSubmit}>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="sensorname" type="text" class="validate"
+            <div className="row">
+                <form className="col s6 right-align" onSubmit={handleSubmit}>
+                    <div className="row">
+                        <div className="input-field col s12">
+                            <input id="sensorname" type="text" className="validate"
                                 onChange={handleInputChange}
                                 name="sensorname"
                                 value={sensorData?.sensorname}
@@ -92,24 +92,24 @@ const CreateSensor = props => {
                             />
                             <label htmlFor="sensorname">Sensorname</label>
                         </div>
-                        <div class="input-field col s12">
-                            <input id="location" type="text" class="validate"
+                        <div className="input-field col s12">
+                            <input id="location" type="text" className="validate"
                                 onChange={handleInputChange}
                                 name="location"
                                 value={sensorData?.location}
                             />
                             <label htmlFor="location">Location</label>
                         </div>
-                        <div class="input-field col s6">
-                            <input id="longitude" type="number" class="validate"
+                        <div className="input-field col s6">
+                            <input id="longitude" type="number" className="validate"
                                 onChange={handleInputChange}
                                 name="longitude"
                                 value={sensorData?.longitude}
                             />
                             <label htmlFor="longitude">Longitude</label>
                         </div>
-                        <div class="input-field col s6">
-                            <input id="latitude" type="number" class="validate"
+                        <div className="input-field col s6">
+                            <input id="latitude" type="number" className="validate"
                                 onChange={handleInputChange}
                                 name="latitude"
                                 value={sensorData?.latitude}
@@ -117,9 +117,9 @@ const CreateSensor = props => {
                             <label htmlFor="latitude">Latitude</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="interval" type="number" class="validate"
+                    <div className="row">
+                        <div className="input-field col s12">
+                            <input id="interval" type="number" className="validate"
                                 onChange={handleInputChange}
                                 name="interval"
                                 value={sensorData?.interval}
@@ -128,32 +128,32 @@ const CreateSensor = props => {
                             <label htmlFor="interval">Interval [minutes]</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s4">
-                            <select class="browser-default" onChange={handleInputChange} name="measurement" value={sensorData?.treshold} >
-                                <option value="temperature" disabled selected>Measurement</option>
+                    <div className="row">
+                        <div className="input-field col s4">
+                            <select className="browser-default" onChange={handleInputChange} name="measurement" value={sensorData?.treshold} >
+                                <option value="temperature" disabled>Measurement</option>
                                 <option value="temperature">Temperature</option>
                                 <option value="humidity">Humidity</option>
                                 <option value="pressure">Pressure</option>
                             </select>
                         </div>
-                        <div class="input-field col s4">
-                            <select class="browser-default" onChange={handleInputChange} name="operator" value={sensorData?.operator} >
-                                <option value=">" disabled selected>Operator</option>
+                        <div className="input-field col s4">
+                            <select className="browser-default" onChange={handleInputChange} name="operator" value={sensorData?.operator} >
+                                <option value=">" disabled>Operator</option>
                                 <option value=">">greater as</option>
                                 <option value="<">lower than</option>
                             </select>
                         </div>
-                        <div class="input-field col s4">
-                            <input id="treshold" type="number" class="validate"
+                        <div className="input-field col s4">
+                            <input id="treshold" type="number" className="validate"
                                 onChange={handleInputChange}
                                 name="treshold"
                                 value={sensorData?.treshold} />
                             <label htmlFor="treshold">treshold</label>
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Create Sensor
-                        <i class="material-icons right">send</i>
+                    <button className="btn waves-effect waves-light" type="submit" name="action">Create Sensor
+                        <i className="material-icons right">send</i>
                     </button>
                 </form>
             </div>
