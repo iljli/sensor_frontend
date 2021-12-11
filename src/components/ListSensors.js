@@ -68,97 +68,93 @@ const ListSensors = (props) => {
 
   return (
     // <div className="container4">
- 
-      <div className=" row" className="container4">
-      
 
-        <h4 className="info_123">Please select a sensor :</h4>
-        <div className="sensor_list collection with-header  col s4">
-          {listOfSensors &&
-            listOfSensors.map((sensor, index) => (
-              <a
-                href="#!"
-                className=" link_1 collection-item"
-                key={index}
-                onClick={() => handleSelectSensor({ sensor })}
-              >
-               <p className="sensor_list1"> {sensor?.name} - {sensor.location?.loc_name} </p>
-              </a>
-            ))}
-        </div>
+    <div className=" row" className="container4">
 
-        {/* ToDo: intervall not sure */}
-        
-    
-        <div class="selected_sensor col s6 m6">
-          <div class=" my_card card ">
-            <div class="my_card1 card-content ">
-              {selectedSensor ? (
-                <>
-                  <span class="card-title">
-                    {selectedSensor && selectedSensor?.name}
-                  </span>
-                  <p>
-                    Location:{" "}
-                    {selectedSensor && selectedSensor.location?.loc_name}
-                  </p>
-                  <p>
-                    Latitude:{" "}
-                    {selectedSensor && selectedSensor.location?.loc_lat}{" "}
-                    Longitude:{" "}
-                    {selectedSensor && selectedSensor.location?.loc_lng}
-                  </p>
-                  <p>
-                    Measurement intervall:{" "}
-                    {selectedSensor &&
-                      Math.round(
-                        selectedSensor.config?.measurement_intervals / 60000
-                      )}{" "}
-                    Minutes
-                  </p>
-                  <p>
-                    Alarms:
-                    {selectedSensor &&
-                      selectedSensor.config?.alarms.map((alarm, index) => (
-                        <p>
-                          {" "}
-                          Treshold {index + 1}: {alarm?.operator}
-                          {alarm?.treshold} {alarm?.measurement_type}{" "}
-                        </p>
-                      ))}
-                  </p>
-                </>
-              ) : <h4> </h4>}
-            </div>
-            {selectedSensor && (
-              <div className=" container5 card-action">
-                <NavLink to={`/graph/${selectedSensor?._id}`}>
-                  <a class="waves-effect waves-light btn-small">Graph</a>
-                </NavLink>
 
-                {/* <a class="waves-effect waves-light btn-small">
+      <h4 className="info_123">Please select a sensor :</h4>
+      <div className="sensor_list collection with-header  col s4">
+        {listOfSensors &&
+          listOfSensors.map((sensor, index) => (
+            <a
+              href="#!"
+              className=" link_1 collection-item"
+              key={index}
+              onClick={() => handleSelectSensor({ sensor })}
+            >
+              <p className="sensor_list1"> {sensor?.name} - {sensor.location?.loc_name} </p>
+            </a>
+          ))}
+      </div>
+
+      {/* ToDo: intervall not sure */}
+
+
+      <div className="selected_sensor col s6 m6">
+        <div className=" my_card card ">
+          <div className="my_card1 card-content ">
+            {selectedSensor ? (
+              <>
+                <span className="card-title">
+                  {selectedSensor && selectedSensor?.name}
+                </span>
+                <p>
+                  Location:{" "}
+                  {selectedSensor && selectedSensor.location?.loc_name}
+                </p>
+                <p>
+                  Latitude:{" "}
+                  {selectedSensor && selectedSensor.location?.loc_lat}{" "}
+                  Longitude:{" "}
+                  {selectedSensor && selectedSensor.location?.loc_lng}
+                </p>
+                <p>
+                  Measurement intervall:{" "}
+                  {selectedSensor &&
+                    Math.round(
+                      selectedSensor.config?.measurement_intervals / 60000
+                    )}{" "}
+                  Minutes
+                </p>
+                <p>
+                  Alarms:
+                  {selectedSensor &&
+                    selectedSensor.config?.alarms.map((alarm, index) => (
+                      <p>
+                        {" "}
+                        Treshold {index + 1}: {alarm?.operator}
+                        {alarm?.treshold} {alarm?.measurement_type}{" "}
+                      </p>
+                    ))}
+                </p>
+              </>
+            ) : <h4> </h4>}
+          </div>
+          {selectedSensor && (
+            <div className="container5 card-action">
+              <NavLink to={`/graph/${selectedSensor?._id}`}>
+                <a className="waves-effect waves-light btn-small">Graph</a>
+              </NavLink>
+
+              {/* <a class="waves-effect waves-light btn-small">
                                 Configure a sensor
                             </a> */}
-                {/* ToDo */}
-                <NavLink to={`/createSensor`}>
-                  <a class="waves-effect waves-light btn-small">
-                    Create new Sensor
-                  </a>
-                </NavLink>
-              
+              {/* ToDo */}
+              <NavLink className="waves-effect waves-light btn-small" to={`/createSensor`} >
+                Create new Sensor
+              </NavLink>
 
-                {/* <a class="waves-effect waves-light btn-small">Delete a Sensor</a> */}
-                {/* ToDo */}
-              </div>
-            )}
-          </div>
+
+              {/* <a class="waves-effect waves-light btn-small">Delete a Sensor</a> */}
+              {/* ToDo */}
+            </div>
+          )}
         </div>
-        <div className="imgcont">
-   
       </div>
-    
-        
-      </div>
+
+
+
+    </div>
     // </div>
   );
 };

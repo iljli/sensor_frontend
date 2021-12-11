@@ -59,7 +59,7 @@ const Login = () => {
         <div className="con1">
           <h3 className="info1"> Login into your account : </h3>
           <form>
-            <label for="username">Username:</label>
+            <label htmlFor="username">Username:</label>
             <input
               type="text"
               id="username"
@@ -67,7 +67,7 @@ const Login = () => {
               onChange={handleChange}
               value={userInput.username}
             />
-            <label for="password">Password:</label>
+            <label htmlFor="password">Password:</label>
             <input
               type="password"
               id="password"
@@ -78,12 +78,12 @@ const Login = () => {
           </form>
         </div>
         <button
-          class="my_button2 #fdd835 yellow darken-1 btn waves-effect waves-light login_button pulse  "
+          className="my_button2 #fdd835 yellow darken-1 btn waves-effect waves-light login_button pulse  "
           type="submit"
           onClick={login}
         >
           Submit
-          <i class="material-icons right ">vpn_key</i>
+          <i className="material-icons right ">vpn_key</i>
         </button>
         <img className="outline1" src={outline1} />
       </div>

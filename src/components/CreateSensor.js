@@ -90,7 +90,7 @@ const CreateSensor = props => {
                                 value={sensorData?.sensorname}
                                 required={true}
                             />
-                            <label for="sensorname">Sensorname</label>
+                            <label htmlFor="sensorname">Sensorname</label>
                         </div>
                         <div class="input-field col s12">
                             <input id="location" type="text" class="validate"
@@ -98,7 +98,7 @@ const CreateSensor = props => {
                                 name="location"
                                 value={sensorData?.location}
                             />
-                            <label for="location">Location</label>
+                            <label htmlFor="location">Location</label>
                         </div>
                         <div class="input-field col s6">
                             <input id="longitude" type="number" class="validate"
@@ -106,7 +106,7 @@ const CreateSensor = props => {
                                 name="longitude"
                                 value={sensorData?.longitude}
                             />
-                            <label for="longitude">Longitude</label>
+                            <label htmlFor="longitude">Longitude</label>
                         </div>
                         <div class="input-field col s6">
                             <input id="latitude" type="number" class="validate"
@@ -114,7 +114,7 @@ const CreateSensor = props => {
                                 name="latitude"
                                 value={sensorData?.latitude}
                             />
-                            <label for="latitude">Latitude</label>
+                            <label htmlFor="latitude">Latitude</label>
                         </div>
                     </div>
                     <div class="row">
@@ -125,7 +125,7 @@ const CreateSensor = props => {
                                 value={sensorData?.interval}
                                 required="true"
                             />
-                            <label for="interval">Interval [minutes]</label>
+                            <label htmlFor="interval">Interval [minutes]</label>
                         </div>
                     </div>
                     <div class="row">
@@ -149,7 +149,7 @@ const CreateSensor = props => {
                                 onChange={handleInputChange}
                                 name="treshold"
                                 value={sensorData?.treshold} />
-                            <label for="treshold">treshold</label>
+                            <label htmlFor="treshold">treshold</label>
                         </div>
                     </div>
                     <button class="btn waves-effect waves-light" type="submit" name="action">Create Sensor

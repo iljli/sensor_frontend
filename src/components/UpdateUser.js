@@ -113,7 +113,7 @@ const Update_user = () => {
                 name="password"
                 value={userData?.password}
               />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
             </div>
           </div>
           <div class="row">
