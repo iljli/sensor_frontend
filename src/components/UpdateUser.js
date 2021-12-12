@@ -64,72 +64,76 @@ const Update_user = () => {
   }, [])
 
   return (
-    <div className="container6">
+    <div className="container12 row">
       {/* <img className="man" src={man} /> */}
-      <div className="row" className="container7">
-        <form className="col s6 right-align" onSubmit={handleSubmit}>
-          <div className="row">
-            <div className=" input-field col s12">
-              <input
-                id="username"
-                type="text"
-                className="validate"
-                onChange={handleInputChange}
-                name="username"
-                value={userData?.username}
-              />
-              <label >Username</label>
-            </div>
-            <div className="input-field col s6">
-              <input
-                id="first_name"
-                type="text"
-                className="validate"
-                onChange={handleInputChange}
-                name="first_name"
-                value={userData?.first_name}
-              />
-              <label >First Name</label>
-            </div>
-            <div className="input-field col s6">
-              <input
-                id="last_name"
-                type="text"
-                className="validate"
-                onChange={handleInputChange}
-                name="last_name"
-                value={userData?.last_name}
-              />
-              <label >Last Name</label>
-            </div>
+      {/* <div className="row" className="container7"> */}
+      <div class="col s2 m3 l4">
+
+      </div>
+
+      <form className="col s8 m6 l4 right-align" onSubmit={handleSubmit}>
+        <div className="row">
+          <div className=" input-field col s12">
+            <input
+              id="username"
+              type="text"
+              className="validate"
+              onChange={handleInputChange}
+              name="username"
+              value={userData?.username}
+            />
+            <label >Username</label>
           </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <input
-                id="password"
-                type="password"
-                className="validate"
-                onChange={handleInputChange}
-                name="password"
-                value={userData?.password}
-              />
-              <label htmlFor="password">Password</label>
-            </div>
+          <div className="input-field col s6">
+            <input
+              id="first_name"
+              type="text"
+              className="validate"
+              onChange={handleInputChange}
+              name="first_name"
+              value={userData?.first_name}
+            />
+            <label >First Name</label>
           </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <input
-                id="email"
-                type="email"
-                className="validate"
-                onChange={handleInputChange}
-                name="email"
-                value={userData?.email}
-              />
-              <label >Email</label>
-            </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              type="text"
+              className="validate"
+              onChange={handleInputChange}
+              name="last_name"
+              value={userData?.last_name}
+            />
+            <label >Last Name</label>
           </div>
-          {/* <button
+        </div>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="password"
+              type="password"
+              className="validate"
+              onChange={handleInputChange}
+              name="password"
+              value={userData?.password}
+            />
+            <label htmlFor="password">Password</label>
+          </div>
+        </div>
+        <div className="row">
+          <div className="input-field col s12">
+            <input
+              id="email"
+              type="email"
+              className="validate"
+              onChange={handleInputChange}
+              name="email"
+              value={userData?.email}
+            />
+            <label >Email</label>
+          </div>
+        </div>
+        {/* <button
             className="btn waves-effect waves-light"
             type="submit"
             name="action"
@@ -140,13 +144,18 @@ const Update_user = () => {
           </button> */}
 
 
-          <button className=" my_button1 btn waves-effect waves-light #26c6da cyan lighten-1" type="submit" name="action">Change Userdata
-            <i className="material-icons right">send</i>
-          </button>
+        <button className="my_button1 btn waves-effect waves-light #26c6da cyan lighten-1" type="submit" name="action">Change Userdata
+          <i className="material-icons right" />
+        </button>
 
-        </form>
+      </form>
+
+      <div class="col s2 m3 l4">
+
       </div>
+
     </div>
+    // </div>
   );
 };
 

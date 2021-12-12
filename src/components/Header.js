@@ -1,6 +1,9 @@
+import React, { useEffect } from "react";
 import { Switch, Route, Link, NavLink } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import logo1 from "../pictures/logo1.png";
+
+
 
 const Header = () => {
   const { userData, setUserData } = useUserContext();
@@ -9,11 +12,13 @@ const Header = () => {
     setUserData();
   };
 
+
+
   return (
     <nav >
-      <div className=" nav_bar nav-wrapper   ">
+      <div className="nav_bar nav-wrapper">
         <img className="logo1" src={logo1} />
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <ul className="right button-collapse ">
           {!userData && (
             <li>
               <Link to="/userManagement">Create Profile</Link>
@@ -46,6 +51,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
+
     </nav>
   );
 };

@@ -81,7 +81,11 @@ const CreateSensor = props => {
     return (
         <div>
             <div className="row">
-                <form className="col s6 right-align" onSubmit={handleSubmit}>
+                <div class="col s2 m3 l4">
+
+                </div>
+
+                <form className="col s8 m6 l4 right-align" onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="sensorname" type="text" className="validate"
@@ -153,9 +157,13 @@ const CreateSensor = props => {
                         </div>
                     </div>
                     <button className="btn waves-effect waves-light" type="submit" name="action">Create Sensor
-                        <i className="material-icons right">send</i>
+                        <i className="material-icons right" />
                     </button>
                 </form>
+
+                <div class="col s2 m3 l4">
+
+                </div>
             </div>
             Sensor Id of new sensor: {newSensorId && newSensorId}
         </div>

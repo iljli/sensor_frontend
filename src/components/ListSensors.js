@@ -154,7 +154,7 @@ const ListSensors = (props) => {
         </div>
       </div>
 
-    // </div>
+    </div>
   );
 };
 

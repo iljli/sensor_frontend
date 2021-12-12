@@ -11,7 +11,7 @@
     "echarts": "^5.2.2",
     "echarts-for-react": "^3.0.2",
     "faker": "^5.5.3",
-    "materialize-css": "^1.0.0",
+    "materialize-css": "^1.0.0-rc.2",
     "nanoid": "^3.1.30",
     "react": "^17.0.2",
     "react-chartjs-2": "^4.0.0",

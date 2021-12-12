@@ -53,11 +53,11 @@ const Login = () => {
   // console.log(userInput);
 
   return (
-    <div className=" container9 row " >
-      <div className="container10 col s12 login_container">
+    <div className=" container9 row" >
+      <div className="container col s4 login_container">
 
         <div className="con1">
-          <h3 className="info1"> Login into your account : </h3>
+          <h3 className="loginHeading"> Login into your account: </h3>
           <form>
             <label htmlFor="username">Username:</label>
             <input
@@ -76,15 +76,17 @@ const Login = () => {
               value={userInput.password}
             />
           </form>
+          <button
+            className="my_button2 #fdd835 yellow right darken-1 btn waves-effect waves-light login_button pulse"
+            type="submit"
+            onClick={login}
+          >
+            Login
+            <i className="material-icons right " />
+          </button>
         </div>
-        <button
-          className="my_button2 #fdd835 yellow darken-1 btn waves-effect waves-light login_button pulse  "
-          type="submit"
-          onClick={login}
-        >
-          Submit
-          <i className="material-icons right ">vpn_key</i>
-        </button>
+      </div>
+      <div className="container10 col s6 ">
         <img className="outline1" src={outline1} />
       </div>
     </div>

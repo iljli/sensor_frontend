@@ -3,29 +3,19 @@
   margin: 0auto;
 }
 
+.main1 {
+  background-image: url("https://www.bolinius.com/wp-content/uploads/2019/09/water-wallpaper-3.jpg");
+  background-position: 50% 50%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
 h5 {
   margin: 0;
 }
 
-.main1 {
-  /* background: rgb(155, 238, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(155, 238, 255, 1) 0%,
-    rgba(109, 112, 238, 1) 47%,
-    rgba(98, 227, 255, 1) 100%
-  ); */
-
-  background-image: url("https://www.bolinius.com/wp-content/uploads/2019/09/water-wallpaper-3.jpg");
-  background-position: 50% 50%;
-  /* background: rgb(184, 233, 244);
-  background: linear-gradient(
-    90deg,
-    rgba(184, 233, 244, 1) 0%,
-    rgba(182, 184, 252, 1) 47%,
-    rgba(164, 237, 252, 1) 100%
-  ); */
-}
 
 .charts {
   display: flex;
@@ -74,21 +64,6 @@ h5 {
 
 /* Contacts styling */
 
-/* .info {
-  font-family: "Kaushan Script", cursive;
-}
-
-.contactsContainer {
-  background-image: url("https://baynature.org/wp-content/uploads/2016/03/journaling_coverart2_loop.gif");
-  background-position: 50% 50%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-}
-
-.names {
-  background-color: transparent;
-} */
 
 .login_container {
   display: flex;
@@ -111,15 +86,14 @@ h5 {
 
 .graph-xy {
   width: 80%;
-  /* width: 200px; */
   margin: 50px;
 }
 
-/* .range-field {
-  width: 50%;
-} */
 
-/*About us styling  */
+
+/* About us styling  */
+
+
 
 .container1 {
   display: flex;
@@ -132,22 +106,18 @@ h5 {
   height: 350px;
 }
 
-.landing {
-  font-family: "Corinthia", cursive;
-}
 
-.landing1 {
-  font-family: "Montserrat", sans-serif;
+.landing {
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .colored {
   background-color: #fffdbb;
 }
 
-/* 
-Nav bar  */
+/* Nav bar  */
 
 .nav_bar {
   background-color: #24bddf;
@@ -161,14 +131,15 @@ Nav bar  */
 
 .footer_1 {
   background-color: #24bddf;
+  white-space: nowrap;
 
   height: 150px;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
-/* 
-CONTACTS */
+/* CONTACTS */
+
 .names {
   height: 540px;
   display: flex;
@@ -179,11 +150,11 @@ CONTACTS */
 }
 
 .info {
-  font-family: "Corinthia", cursive;
+  font-family: 'Baloo Bhaijaan 2', cursive;
 }
 
 .name {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bolder;
   font-size: 25px;
   background-color: #fffdbb;
@@ -230,27 +201,27 @@ CONTACTS */
 
 .input-field label {
   color: #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bold;
 }
 
 .input-field input[type="text"]:focus+label {
   color: #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bold;
 }
 
 .input-field input[type="text"]:focus {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bold;
 }
 
 .input-field input[type="text"].valid {
   border-bottom: 1px solid #000;
   box-shadow: 0 1px 0 0 #000;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bold;
 }
 
@@ -277,7 +248,7 @@ CONTACTS */
 }
 
 .info_123 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-weight: bold;
 }
 
@@ -332,10 +303,20 @@ CONTACTS */
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://cdn.dribbble.com/users/2120934/screenshots/6193524/19_mostlysunny.gif");
+}
 
-  background-repeat: no-repeat;
-  background-position: right;
+@media (min-width: 1400px) {
+  .container10 {
+    background-image: url("https://cdn.dribbble.com/users/2120934/screenshots/6193524/19_mostlysunny.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  img {
+    display: none;
+  }
 }
 
 .con1 {
@@ -345,7 +326,7 @@ CONTACTS */
 
 label {
   color: black;
-  font-family: "Corinthia", cursive;
+  font-family: 'Baloo Bhaijaan 2', cursive;
   font-size: 2rem;
 }
 
@@ -371,9 +352,9 @@ label {
   color: black;
 }
 
-.info1 {
+.loginHeading {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-shadow: 2px 2px #fdd835;
+  white-space: nowrap;
 }
 
 /* GRAPHS */
