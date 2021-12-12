@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import M from "materialize-css";
 import outline from "../pictures/outline.png"
-import grass from "../pictures/grass.png"
+// import grass from "../pictures/grass.png"
 // import { TextInput, Button } from 'react-materialize';
 
 /* ToDo:
@@ -63,10 +63,12 @@ const UserManagement = props => {
     return (
         <div className="container_1">
             <div className="container_2 row">
-                <img className="outline" src={outline} />
+                {/* <img className="outline" src={outline} /> */}
+                <div class="col s2 m3 l4">
 
+                </div>
 
-                <form className=" form_1 col s6 right-align" onSubmit={handleSubmit}>
+                <form className=" form_1 col s8 m6 l4 right-align" onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="username" type="text" className="validate"
@@ -113,12 +115,16 @@ const UserManagement = props => {
                         </div>
                     </div>
                     <button className="my_button btn waves-effect waves-light pulse" type="submit" name="action">Create User
-                        <i className="material-icons right">send</i>
+                        <i className="material-icons right" />
                     </button>
 
                 </form>
+
+                <div class="col s2 m3 l4">
+
+                </div>
             </div>
-            <img className="grass" src="https://media1.giphy.com/media/ZZTklXupTzGtbf9kYq/giphy.gif?cid=790b7611c8ecd7acf2dd1f1828db55fd8c316910b4b0a208&rid=giphy.gif&ct=s" />
+            {/* <img className="grass" src="https://media1.giphy.com/media/ZZTklXupTzGtbf9kYq/giphy.gif?cid=790b7611c8ecd7acf2dd1f1828db55fd8c316910b4b0a208&rid=giphy.gif&ct=s" /> */}
         </div>
     )
 }
